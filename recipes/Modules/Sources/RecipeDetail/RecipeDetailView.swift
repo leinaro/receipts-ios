@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
+import AppCore
 
-struct RecipeDetailView: View {
+public struct RecipeDetailView: View {
     
     private var recipe: Recipe
-    init(recipe: Recipe){
+    public init(recipe: Recipe){
         self.recipe = recipe
     }
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .center) {
             Text("\(self.recipe.name)").font(.title)
             AsyncImage(
@@ -62,13 +63,13 @@ struct RecipeDetailView: View {
             minHeight: 0,
             maxHeight: .infinity
         )
-
     }
 }
 
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let recipe = Recipe(
+            id: UUID(),
             name: "Arroz con pollo",
             imageUrl: "https://picsum.photos/300/100",
             ingredient: ["Arroz", "Pollo", "Sal", "Agua", "Salchichas"],

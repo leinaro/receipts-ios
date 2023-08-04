@@ -8,19 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		ED28B7262A7B149F006555BB /* recipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28B7252A7B149F006555BB /* recipesApp.swift */; };
-		ED28B7282A7B149F006555BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28B7272A7B149F006555BB /* ContentView.swift */; };
 		ED28B72A2A7B14A2006555BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED28B7292A7B14A2006555BB /* Assets.xcassets */; };
 		ED28B72D2A7B14A2006555BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED28B72C2A7B14A2006555BB /* Preview Assets.xcassets */; };
 		ED28B7372A7B14A2006555BB /* recipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28B7362A7B14A2006555BB /* recipesTests.swift */; };
 		ED28B7412A7B14A2006555BB /* recipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28B7402A7B14A2006555BB /* recipesUITests.swift */; };
 		ED28B7432A7B14A2006555BB /* recipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28B7422A7B14A2006555BB /* recipesUITestsLaunchTests.swift */; };
-		ED4103352A7B228F003ECA92 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = ED4103342A7B228F003ECA92 /* ComposableArchitecture */; };
-		EDB499262A7B552E0048D9FF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB499252A7B552E0048D9FF /* HomeView.swift */; };
-		EDB4992A2A7B57090048D9FF /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB499292A7B57090048D9FF /* HomeState.swift */; };
-		EDB4992C2A7B58500048D9FF /* HomeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4992B2A7B58500048D9FF /* HomeAction.swift */; };
-		EDB4992E2A7B5A500048D9FF /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4992D2A7B5A500048D9FF /* HomeReducer.swift */; };
-		EDB499302A7B626B0048D9FF /* HomeReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4992F2A7B626A0048D9FF /* HomeReducerTests.swift */; };
-		EDE5F6812A7B3343007580C0 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F6802A7B3343007580C0 /* RecipeDetailView.swift */; };
+		ED6547DD2A7C74D20099FED9 /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = ED6547DC2A7C74D20099FED9 /* Modules */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +36,6 @@
 /* Begin PBXFileReference section */
 		ED28B7222A7B149F006555BB /* recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED28B7252A7B149F006555BB /* recipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipesApp.swift; sourceTree = "<group>"; };
-		ED28B7272A7B149F006555BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ED28B7292A7B14A2006555BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED28B72C2A7B14A2006555BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED28B7322A7B14A2006555BB /* recipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,12 +43,7 @@
 		ED28B73C2A7B14A2006555BB /* recipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED28B7402A7B14A2006555BB /* recipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipesUITests.swift; sourceTree = "<group>"; };
 		ED28B7422A7B14A2006555BB /* recipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EDB499252A7B552E0048D9FF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		EDB499292A7B57090048D9FF /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
-		EDB4992B2A7B58500048D9FF /* HomeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAction.swift; sourceTree = "<group>"; };
-		EDB4992D2A7B5A500048D9FF /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
-		EDB4992F2A7B626A0048D9FF /* HomeReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducerTests.swift; sourceTree = "<group>"; };
-		EDE5F6802A7B3343007580C0 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		EDB4993A2A7C575A0048D9FF /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED4103352A7B228F003ECA92 /* ComposableArchitecture in Frameworks */,
+				ED6547DD2A7C74D20099FED9 /* Modules in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,10 +75,12 @@
 		ED28B7192A7B149F006555BB = {
 			isa = PBXGroup;
 			children = (
+				EDB499392A7C575A0048D9FF /* Packages */,
 				ED28B7242A7B149F006555BB /* recipes */,
 				ED28B7352A7B14A2006555BB /* recipesTests */,
 				ED28B73F2A7B14A2006555BB /* recipesUITests */,
 				ED28B7232A7B149F006555BB /* Products */,
+				EDB499342A7C48130048D9FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,10 +97,7 @@
 		ED28B7242A7B149F006555BB /* recipes */ = {
 			isa = PBXGroup;
 			children = (
-				EDB499242A7B55060048D9FF /* Home */,
-				EDE5F6802A7B3343007580C0 /* RecipeDetailView.swift */,
 				ED28B7252A7B149F006555BB /* recipesApp.swift */,
-				ED28B7272A7B149F006555BB /* ContentView.swift */,
 				ED28B7292A7B14A2006555BB /* Assets.xcassets */,
 				ED28B72B2A7B14A2006555BB /* Preview Content */,
 			);
@@ -130,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				ED28B7362A7B14A2006555BB /* recipesTests.swift */,
-				EDB4992F2A7B626A0048D9FF /* HomeReducerTests.swift */,
 			);
 			path = recipesTests;
 			sourceTree = "<group>";
@@ -144,15 +129,19 @@
 			path = recipesUITests;
 			sourceTree = "<group>";
 		};
-		EDB499242A7B55060048D9FF /* Home */ = {
+		EDB499342A7C48130048D9FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EDB499252A7B552E0048D9FF /* HomeView.swift */,
-				EDB499292A7B57090048D9FF /* HomeState.swift */,
-				EDB4992B2A7B58500048D9FF /* HomeAction.swift */,
-				EDB4992D2A7B5A500048D9FF /* HomeReducer.swift */,
 			);
-			path = Home;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDB499392A7C575A0048D9FF /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4993A2A7C575A0048D9FF /* Modules */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +161,7 @@
 			);
 			name = recipes;
 			packageProductDependencies = (
-				ED4103342A7B228F003ECA92 /* ComposableArchitecture */,
+				ED6547DC2A7C74D20099FED9 /* Modules */,
 			);
 			productName = recipes;
 			productReference = ED28B7222A7B149F006555BB /* recipes.app */;
@@ -247,7 +236,6 @@
 			);
 			mainGroup = ED28B7192A7B149F006555BB;
 			packageReferences = (
-				ED4103332A7B228F003ECA92 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = ED28B7232A7B149F006555BB /* Products */;
 			projectDirPath = "";
@@ -291,12 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED28B7282A7B149F006555BB /* ContentView.swift in Sources */,
-				EDB4992E2A7B5A500048D9FF /* HomeReducer.swift in Sources */,
-				EDB4992A2A7B57090048D9FF /* HomeState.swift in Sources */,
-				EDE5F6812A7B3343007580C0 /* RecipeDetailView.swift in Sources */,
-				EDB499262A7B552E0048D9FF /* HomeView.swift in Sources */,
-				EDB4992C2A7B58500048D9FF /* HomeAction.swift in Sources */,
 				ED28B7262A7B149F006555BB /* recipesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED28B7372A7B14A2006555BB /* recipesTests.swift in Sources */,
-				EDB499302A7B626B0048D9FF /* HomeReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +352,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -431,6 +413,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -620,22 +603,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		ED4103332A7B228F003ECA92 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		ED4103342A7B228F003ECA92 /* ComposableArchitecture */ = {
+		ED6547DC2A7C74D20099FED9 /* Modules */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ED4103332A7B228F003ECA92 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
+			productName = Modules;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

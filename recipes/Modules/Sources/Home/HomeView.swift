@@ -7,39 +7,40 @@
 
 import SwiftUI
 import ComposableArchitecture
+import AppCore
+import RecipeDetail
 
-struct HomeView: View {
+public struct HomeView: View {
     let store: StoreOf<HomeReducer>
     
-    /*private var recipeList: [Recipe]
-    init(recipeList: [Recipe]){
-        self.recipeList = recipeList
-    }*/
-    var body: some View {
+    public init(store: StoreOf<HomeReducer>) {
+        self.store = store
+    }
+
+    public var body: some View {
         WithViewStore(self.store, observe: {$0}){ viewStore in
             NavigationView {
-                List {
-                    ForEach(viewStore.recipeList) { recipe in
-                        NavigationLink(
-                            destination: RecipeDetailView(recipe: recipe)
-                        ) {
-                            HStack{
-                                AsyncImage(
-                                    url: URL(string: recipe.imageUrl),
-                                    content: { image in
-                                        image.resizable()
-                                             .frame(width: 50, height: 50)
-                                    },
-                                    placeholder: {
-                                        ProgressView()
-                                    }
-                                ).frame(maxWidth: 100, maxHeight: 100)
-                                Text("\(recipe.name)")
-                            }
+                List(viewStore.recipeList) { recipe in
+                    NavigationLink(
+                        destination: RecipeDetailView(recipe: recipe)
+                    ) {
+                        HStack{
+                            AsyncImage(
+                                url: URL(string: recipe.imageUrl),
+                                content: { image in
+                                    image.resizable()
+                                         .frame(width: 50, height: 50)
+                                },
+                                placeholder: {
+                                    ProgressView()
+                                }
+                            ).frame(maxWidth: 100, maxHeight: 100)
+                            Text("\(recipe.name)")
                         }
                     }
                 }.navigationTitle("Recipes")
             }
+            .onAppear { viewStore.send(.onAppear) }
         }
     }
 }
@@ -48,6 +49,7 @@ struct Home_Previews: PreviewProvider {
     static var previews: some View {
         let recipeList: [Recipe] = [
             Recipe(
+                id: UUID(uuidString: "123asdf"),
                 name: "Arroz con pollo",
                 imageUrl: "https://picsum.photos/300/100",
                 ingredient: ["Arroz", "Pollo", "Sal", "Agua", "Salchichas"],

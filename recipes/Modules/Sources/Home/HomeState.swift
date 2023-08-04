@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import AppCore
 
-struct HomeState: Equatable {
+public struct HomeState: Equatable {
     var recipeList: [Recipe] = []
     
-    init(
+    public init(
         recipeList: [Recipe]
     ){
         self.recipeList = recipeList

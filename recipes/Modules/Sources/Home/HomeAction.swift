@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum HomeAction: Equatable {
+public enum HomeAction: Equatable {
     case onAppear
 }

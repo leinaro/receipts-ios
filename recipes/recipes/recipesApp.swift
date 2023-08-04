@@ -6,18 +6,21 @@
 //
 
 import SwiftUI
+import Home
+import AppCore
 import ComposableArchitecture
 
 @main
 struct recipesApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView(store: Store(
-                initialState: HomeReducer.State(recipeList: [])
-            ){
-                HomeReducer()
-                
-            })
+            EmptyView()
+            HomeView(
+                store: Store(
+                    initialState: HomeReducer.State(recipeList: [])
+                ){
+                    HomeReducer()
+                })
         }
     }
 }
