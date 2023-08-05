@@ -17,3 +17,16 @@ public struct HomeState: Equatable {
         self.recipeList = recipeList
     }
 }
+
+#if DEBUG
+public extension HomeState {
+    static func mock(
+        recipeList: [Recipe] = Dummy.getInstance().recipeList
+    ) -> Self {
+        .init(
+            recipeList: recipeList
+        )
+    }
+}
+#endif
+

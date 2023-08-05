@@ -1,0 +1,45 @@
+{
+  "configurations" : [
+    {
+      "id" : "BA41F5EB-2EE7-4970-93B7-729521E7FCCD",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:recipes.xcodeproj",
+      "identifier" : "ED28B7212A7B149F006555BB",
+      "name" : "recipes"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:recipes.xcodeproj",
+        "identifier" : "ED28B7312A7B14A2006555BB",
+        "name" : "recipesTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:recipes.xcodeproj",
+        "identifier" : "ED28B73B2A7B14A2006555BB",
+        "name" : "recipesUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules",
+        "identifier" : "ModulesTests",
+        "name" : "ModulesTests"
+      }
+    }
+  ],
+  "version" : 1
+}

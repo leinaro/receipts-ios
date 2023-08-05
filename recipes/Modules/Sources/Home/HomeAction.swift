@@ -6,7 +6,13 @@
 //
 
 import Foundation
+import AppCore
+import Combine
+import ComposableArchitecture
+
 
 public enum HomeAction: Equatable {
     case onAppear
+    case showRecipeList([Recipe])
+    case showError(String)
 }

@@ -1,31 +1,30 @@
 //
-//  HomeReducer.swift
-//  recipesTests
+//  HomeViewTests.swift
+//  
 //
-//  Created by Inés Rojas on 2/08/23.
+//  Created by Inés Rojas on 5/08/23.
 //
 
 import XCTest
+import SnapshotTesting
+import Home
 import ComposableArchitecture
 
-@testable import Home
-@testable import AppCore
-
-
-@MainActor
-final class HomeReducerTests: XCTestCase {
+final class HomeViewTests: XCTestCase {
     
-    func testOnAppear() async {
-        let store = TestStore(
-            initialState: HomeReducer.State(recipeList: [])) {
-              HomeReducer()
+    func testHomeViewSnapshots(){
+        let store = Store(
+            initialState: .mock()){
+                HomeReducer()
             }
         
-        await store.send(.onAppear) {
-            $0.recipeList = Dummy.getInstance().recipeList
-        }
+        let view = HomeView(
+            store: store
+        )
+        assertSnapshot(matching: view, as: .image)
+        
     }
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
