@@ -9,7 +9,6 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false,
     "targetForVariableExpansion" : {
       "containerPath" : "container:recipes.xcodeproj",
       "identifier" : "ED28B7212A7B149F006555BB",
@@ -35,7 +34,7 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Modules",
+        "containerPath" : "container:",
         "identifier" : "ModulesTests",
         "name" : "ModulesTests"
       }

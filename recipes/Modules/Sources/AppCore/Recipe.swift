@@ -14,6 +14,9 @@ public struct Recipe: Identifiable, Equatable, Codable {
     public var imageUrl: String
     public var ingredient: String
     public var description: String
+    public var country: String
+    public var latitude: Double
+    public var longitude: Double
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -21,14 +24,22 @@ public struct Recipe: Identifiable, Equatable, Codable {
         case imageUrl = "image_url"
         case ingredient = "ingredients"
         case description = "instructions"
+        case country = "country"
+        case latitude = "latitude"
+        case longitude = "longitude"
     }
     
-    public init(id: UUID?, name: String, imageUrl: String, ingredient: String, description: String) {
+    public init(
+        id: UUID?, name: String, imageUrl: String, ingredient: String, description: String, country: String, latitude: Double, longitude: Double
+    ) {
         self.id = id
         self.name = name
         self.imageUrl = imageUrl
         self.ingredient = ingredient
         self.description = description
+        self.country = country
+        self.latitude = latitude
+        self.longitude = longitude
     }
     
     public init(from decoder: Decoder) throws {
@@ -38,6 +49,9 @@ public struct Recipe: Identifiable, Equatable, Codable {
         imageUrl = try values.decode(String.self, forKey: .imageUrl)
         ingredient = try values.decode(String.self, forKey: .ingredient)
         description = try values.decode(String.self, forKey: .description)
+        country = try values.decode(String.self, forKey: .country)
+        latitude = try values.decode(Double.self, forKey: .latitude)
+        longitude = try values.decode(Double.self, forKey: .longitude)
     }
 }
 

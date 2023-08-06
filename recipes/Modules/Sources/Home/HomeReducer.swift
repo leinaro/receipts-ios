@@ -13,8 +13,12 @@ import Domain
 let recipeList: [Recipe] = Dummy.getInstance().recipeList
 
 public struct HomeReducer: Reducer {
-        
-    public init(){}
+
+    let recipeRepository: RecipeRepository
+    
+    public init(recipeRepository: RecipeRepository = RecipeRepository()){
+        self.recipeRepository = recipeRepository
+    }
     
     struct CancelID {
     }
@@ -27,7 +31,7 @@ public struct HomeReducer: Reducer {
         switch action {
         case .onAppear:
             return .run { send in
-                let recipes = try await RecipeRepository.getRecipes().async()
+                let recipes = try await recipeRepository.getRecipes().async()
 
                 await send(
                   .showRecipeList(recipes)

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AppCore
+import Map
 
 public struct RecipeDetailView: View {
     
@@ -16,54 +17,64 @@ public struct RecipeDetailView: View {
     }
     
     public var body: some View {
-        VStack(alignment: .center) {
-            Text("\(self.recipe.name)").font(.title)
-            AsyncImage(
-                url: URL(string: self.recipe.imageUrl),
-                content: { image in
-                    image.resizable()
-                         .aspectRatio(contentMode: .fit)
-                         .frame(maxWidth: 300, maxHeight: 100)
-                },
-                placeholder: {
-                    ProgressView()
+            VStack(alignment: .center) {
+                Text("\(self.recipe.name)").font(.title)
+                AsyncImage(
+                    url: URL(string: self.recipe.imageUrl),
+                    content: { image in
+                        image.resizable()
+                             .aspectRatio(contentMode: .fit)
+                             .frame(maxWidth: 300, maxHeight: 100)
+                    },
+                    placeholder: {
+                        ProgressView()
+                    }
+                ).frame(maxWidth: 300, maxHeight: 100)
+
+                Text("Ingredientes")
+                    .frame(
+                        alignment: .leading
+                    )
+                    .font(.headline)
+
+                
+                ForEach(self.recipe.ingredient.components(separatedBy: ","), id: \.self) { ingredient in
+                    Text("- \(ingredient)")
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            alignment: .leading
+                        )
                 }
-            ).frame(maxWidth: 300, maxHeight: 100)
-
-            Text("Ingredientes")
-                .frame(
-                    alignment: .leading
-                )
-                .font(.headline)
-
-            
-            ForEach(self.recipe.ingredient.components(separatedBy: ","), id: \.self) { ingredient in
-                Text("- \(ingredient)")
+                Text("Receta")
+                    .frame(
+                        alignment: .leading
+                    )
+                    .font(.headline)
+                Text("\(self.recipe.description)")
                     .frame(
                         minWidth: 0,
                         maxWidth: .infinity,
                         alignment: .leading
                     )
+                HStack {
+                    Text("Origin: \(self.recipe.country)")
+                    NavigationLink(
+                        destination: RecipeMapView(recipe: self.recipe)) {
+                          Text("See on map")
+                        }
+                }.padding(16)
+                
+                
+                Spacer()
             }
-            Text("Receta")
-                .frame(
-                    alignment: .leading
-                )
-                .font(.headline)
-            Text("\(self.recipe.description)")
-                .frame(
-                    minWidth: 0,
-                    maxWidth: .infinity,
-                    alignment: .leading
-                )
-            Spacer()
-        }
-        .frame(
-            minWidth: 0,
-            maxWidth: .infinity,
-            minHeight: 0,
-            maxHeight: .infinity
-        )
+            .navigationTitle("\(self.recipe.name)")
+            .frame(
+                minWidth: 0,
+                maxWidth: .infinity,
+                minHeight: 0,
+                maxHeight: .infinity
+            )
     }
 }
 

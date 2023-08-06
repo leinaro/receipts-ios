@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "google-maps-ios-utils",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:googlemaps/google-maps-ios-utils.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b56b39cec0e3d5938ddadbfeb4d3fec541ebbb5e"
+      }
+    },
+    {
       "identity" : "moya",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Moya/Moya.git",

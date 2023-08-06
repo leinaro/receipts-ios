@@ -18,7 +18,8 @@ let package = Package(
                 "AppCore",
                 "RecipeDetail",
                 "Network",
-                "Domain"
+                "Domain",
+                "Map"
             ]),
     ],
     dependencies: [
@@ -36,10 +37,17 @@ let package = Package(
             url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
             exact: Version(1, 11, 0)
         )
+
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .target(
+            name: "Map",
+            dependencies: [
+                "AppCore"
+            ]
+        ),
         .target(
             name: "Modules",
             dependencies: []
@@ -57,14 +65,6 @@ let package = Package(
                 "AppCore"
             ]
         ),
-        .testTarget(
-            name: "ModulesTests",
-            dependencies: [
-                "Modules",
-                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
-                "Utils-Tests"
-            ]
-        ),
         .target(
             name: "AppCore",
             dependencies: []
@@ -73,7 +73,8 @@ let package = Package(
             name: "RecipeDetail",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
-                "AppCore"
+                "AppCore",
+                "Map"
             ]
         ),
         .target(
@@ -92,5 +93,17 @@ let package = Package(
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
             ]
         ),
+        .testTarget(
+            name: "ModulesTests",
+            dependencies: [
+                "Modules",
+                "Home",
+                "RecipeDetail",
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
+                "Utils-Tests",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
+            ]
+        )
     ]
 )

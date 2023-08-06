@@ -13,22 +13,13 @@ import Moya
 
 public struct RecipeRepository {
 
-    public static var recipeProvider = MoyaProvider<RecipeEndpoint>(plugins: [NetworkLoggerPlugin(configuration: .init(logOptions: .verbose))])
-
-    public static func getAllRecipes() -> AnyPublisher<[Recipe], RecipeError> {
-        return Future {
-            recipeProvider.request(
-                .fetchRecipes,
-                completion: recipeProvider.mapResponseClosure(
-                    failsOnEmptyData: true,
-                    completion: $0
-                )
-            )
-        }
-        .eraseToAnyPublisher()
+    var recipeProvider: MoyaProvider<RecipeEndpoint>
+    
+    public init(recipeProvider: MoyaProvider<RecipeEndpoint> = MoyaProvider<RecipeEndpoint>(plugins: [NetworkLoggerPlugin(configuration: .init(logOptions: .verbose))])) {
+        self.recipeProvider = recipeProvider
     }
     
-    public static func getRecipes() -> AnyPublisher<[Recipe], RecipeError> {
+    public func getRecipes() -> AnyPublisher<[Recipe], RecipeError> {
         recipeProvider
             .getRecipes()
             .map { $0 }

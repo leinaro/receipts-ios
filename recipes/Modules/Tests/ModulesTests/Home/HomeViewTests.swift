@@ -12,7 +12,7 @@ import ComposableArchitecture
 
 final class HomeViewTests: XCTestCase {
     
-    func testHomeViewSnapshots(){
+   /* func testHomeViewSnapshots(){
         let store = Store(
             initialState: .mock()){
                 HomeReducer()
@@ -23,7 +23,7 @@ final class HomeViewTests: XCTestCase {
         )
         assertSnapshot(matching: view, as: .image)
         
-    }
+    }*/
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -14,6 +14,8 @@
 		ED28B7412A7B14A2006555BB /* recipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28B7402A7B14A2006555BB /* recipesUITests.swift */; };
 		ED28B7432A7B14A2006555BB /* recipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28B7422A7B14A2006555BB /* recipesUITestsLaunchTests.swift */; };
 		ED6547DD2A7C74D20099FED9 /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = ED6547DC2A7C74D20099FED9 /* Modules */; };
+		EDD5D7802A8004C4001C6DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5D77F2A8004C4001C6DC3 /* AppDelegate.swift */; };
+		EDD5D78F2A801952001C6DC3 /* GoogleMapsUtils in Frameworks */ = {isa = PBXBuildFile; productRef = EDD5D78E2A801952001C6DC3 /* GoogleMapsUtils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		ED28B7422A7B14A2006555BB /* recipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EDB4993A2A7C575A0048D9FF /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 		EDD3CEC52A7EB0B900E0FE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EDD5D77F2A8004C4001C6DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD5D78F2A801952001C6DC3 /* GoogleMapsUtils in Frameworks */,
 				ED6547DD2A7C74D20099FED9 /* Modules in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +108,7 @@
 				ED28B7252A7B149F006555BB /* recipesApp.swift */,
 				ED28B7292A7B14A2006555BB /* Assets.xcassets */,
 				ED28B72B2A7B14A2006555BB /* Preview Content */,
+				EDD5D77F2A8004C4001C6DC3 /* AppDelegate.swift */,
 			);
 			path = recipes;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			name = recipes;
 			packageProductDependencies = (
 				ED6547DC2A7C74D20099FED9 /* Modules */,
+				EDD5D78E2A801952001C6DC3 /* GoogleMapsUtils */,
 			);
 			productName = recipes;
 			productReference = ED28B7222A7B149F006555BB /* recipes.app */;
@@ -240,6 +246,7 @@
 			);
 			mainGroup = ED28B7192A7B149F006555BB;
 			packageReferences = (
+				EDD5D78D2A801952001C6DC3 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */,
 			);
 			productRefGroup = ED28B7232A7B149F006555BB /* Products */;
 			projectDirPath = "";
@@ -283,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD5D7802A8004C4001C6DC3 /* AppDelegate.swift in Sources */,
 				ED28B7262A7B149F006555BB /* recipesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +383,47 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-framework",
+					GoogleMaps,
+					"-framework",
+					GoogleMapsBase,
+					"-framework",
+					"GoogleMapsCore\n\n-l\"c++\"",
+					"-framework",
+					GoogleMaps,
+					"-framework",
+					GoogleMapsBase,
+					"-framework",
+					"GoogleMapsCore\n\n-l\"c++\"",
+					"-framework",
+					GoogleMaps,
+					"-framework",
+					GoogleMapsBase,
+					"-framework",
+					"GoogleMapsCore\n\n-l\"c++\"",
+					"-framework",
+					GoogleMaps,
+					"-framework",
+					GoogleMapsBase,
+					"-framework",
+					"GoogleMapsCore\n\n-l\"c++\"",
+					"-framework",
+					GoogleMaps,
+					"-framework",
+					GoogleMapsBase,
+					"-framework",
+					"GoogleMapsCore\n\n-l\"c++\"",
+					"-framework",
+					GoogleMaps,
+					"-framework",
+					GoogleMapsBase,
+					"-framework",
+					"GoogleMapsCore\n\n",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -429,6 +478,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-framework",
+					GoogleMaps,
+					"-framework",
+					GoogleMapsBase,
+					"-framework",
+					"GoogleMapsCore\n\n",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -448,6 +508,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = recipes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Recipes;
+				INFOPLIST_KEY_LSApplicationCategoryType = NSLocationWhenInUseUsageDescription;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,6 +539,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = recipes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Recipes;
+				INFOPLIST_KEY_LSApplicationCategoryType = NSLocationWhenInUseUsageDescription;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -609,10 +671,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		EDD5D78D2A801952001C6DC3 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:googlemaps/google-maps-ios-utils.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		ED6547DC2A7C74D20099FED9 /* Modules */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Modules;
+		};
+		EDD5D78E2A801952001C6DC3 /* GoogleMapsUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDD5D78D2A801952001C6DC3 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */;
+			productName = GoogleMapsUtils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
