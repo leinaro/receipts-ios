@@ -14,5 +14,6 @@ import ComposableArchitecture
 public enum HomeAction: Equatable {
     case onAppear
     case showRecipeList([Recipe])
+    case queryChanged(String)
     case showError(String)
 }

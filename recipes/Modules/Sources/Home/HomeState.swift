@@ -10,11 +10,17 @@ import AppCore
 
 public struct HomeState: Equatable {
     var recipeList: [Recipe] = []
+    var searchResults: [Recipe] = []
+    var query: String
     
     public init(
-        recipeList: [Recipe]
+        recipeList: [Recipe],
+        searchResults: [Recipe]=[],
+        query: String = ""
     ){
         self.recipeList = recipeList
+        self.query = query
+        self.searchResults = searchResults
     }
 }
 

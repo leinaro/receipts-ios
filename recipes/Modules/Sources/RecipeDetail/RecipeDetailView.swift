@@ -17,26 +17,27 @@ public struct RecipeDetailView: View {
     }
     
     public var body: some View {
+        ScrollView {
             VStack(alignment: .center) {
                 Text("\(self.recipe.name)").font(.title)
                 AsyncImage(
                     url: URL(string: self.recipe.imageUrl),
                     content: { image in
                         image.resizable()
-                             .aspectRatio(contentMode: .fit)
-                             .frame(maxWidth: 300, maxHeight: 100)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 300, maxHeight: 100)
                     },
                     placeholder: {
                         ProgressView()
                     }
                 ).frame(maxWidth: 300, maxHeight: 100)
-
+                
                 Text("Ingredientes")
                     .frame(
                         alignment: .leading
                     )
                     .font(.headline)
-
+                
                 
                 ForEach(self.recipe.ingredient.components(separatedBy: ","), id: \.self) { ingredient in
                     Text("- \(ingredient)")
@@ -61,13 +62,14 @@ public struct RecipeDetailView: View {
                     Text("Origin: \(self.recipe.country)")
                     NavigationLink(
                         destination: RecipeMapView(recipe: self.recipe)) {
-                          Text("See on map")
+                            Text("See on map")
                         }
                 }.padding(16)
                 
                 
                 Spacer()
             }
+            .padding(16)
             .navigationTitle("\(self.recipe.name)")
             .frame(
                 minWidth: 0,
@@ -75,6 +77,7 @@ public struct RecipeDetailView: View {
                 minHeight: 0,
                 maxHeight: .infinity
             )
+        }
     }
 }
 

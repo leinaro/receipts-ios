@@ -11,6 +11,7 @@ import AppCore
 import RecipeDetail
 
 public struct HomeView: View {
+
     let store: StoreOf<HomeReducer>
     
     public init(store: StoreOf<HomeReducer>) {
@@ -20,7 +21,7 @@ public struct HomeView: View {
     public var body: some View {
         WithViewStore(self.store, observe: {$0}){ viewStore in
             NavigationView {
-                List(viewStore.recipeList) { recipe in
+                List(viewStore.searchResults) { recipe in
                     NavigationLink(
                         destination: RecipeDetailView(recipe: recipe)
                     ) {
@@ -40,6 +41,13 @@ public struct HomeView: View {
                     }
                 }.navigationTitle("Recipes")
             }
+            .searchable(
+                text: viewStore.binding(
+                    get: \.query,
+                    send: HomeAction.queryChanged
+                  ),
+                prompt: "Search"
+            )
             .onAppear { viewStore.send(.onAppear) }
         }
     }

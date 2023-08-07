@@ -32,13 +32,30 @@ public struct HomeReducer: Reducer {
         case .onAppear:
             return .run { send in
                 let recipes = try await recipeRepository.getRecipes().async()
-
                 await send(
                   .showRecipeList(recipes)
                 )
             }
+        case let .queryChanged(query):
+            state.query = query
+            if state.query.isEmpty {
+                state.searchResults = state.recipeList
+            } else {
+                state.searchResults = state.recipeList.filter {
+                    $0.name.lowercased().contains(state.query.lowercased())
+                }
+            }
+          return .none
         case let .showRecipeList(recipeList):
             state.recipeList = recipeList
+
+            if state.query.isEmpty {
+                state.searchResults = state.recipeList
+            } else {
+                state.searchResults = state.recipeList.filter {
+                    $0.name.lowercased().contains(state.query.lowercased())
+                }
+            }
             return .none
         case let .showError(message):
             return .none
