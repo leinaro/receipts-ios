@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  recipes
+
+  Created by Inés Rojas on 7/08/23.
+  
+*/
+"recipe_list_title" = "Recetas";
+"recipe_list_search" = "Busqueda";
+"recipe_origin_label" = "Origen de la receta";

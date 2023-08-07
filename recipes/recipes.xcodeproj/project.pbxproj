@@ -16,6 +16,7 @@
 		ED6547DD2A7C74D20099FED9 /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = ED6547DC2A7C74D20099FED9 /* Modules */; };
 		EDD5D7802A8004C4001C6DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD5D77F2A8004C4001C6DC3 /* AppDelegate.swift */; };
 		EDD5D78F2A801952001C6DC3 /* GoogleMapsUtils in Frameworks */ = {isa = PBXBuildFile; productRef = EDD5D78E2A801952001C6DC3 /* GoogleMapsUtils */; };
+		EDD5D7952A8181FA001C6DC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDD5D7972A8181FA001C6DC3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		EDB4993A2A7C575A0048D9FF /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 		EDD3CEC52A7EB0B900E0FE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EDD5D77F2A8004C4001C6DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDD5D7962A8181FA001C6DC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EDD5D7992A81825A001C6DC3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		ED28B7192A7B149F006555BB = {
 			isa = PBXGroup;
 			children = (
+				EDD5D7972A8181FA001C6DC3 /* Localizable.strings */,
 				ED107EAB2A7D388800E35947 /* recipes.xctestplan */,
 				EDB499392A7C575A0048D9FF /* Packages */,
 				ED28B7242A7B149F006555BB /* recipes */,
@@ -243,6 +247,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = ED28B7192A7B149F006555BB;
 			packageReferences = (
@@ -265,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED28B72D2A7B14A2006555BB /* Preview Assets.xcassets in Resources */,
+				EDD5D7952A8181FA001C6DC3 /* Localizable.strings in Resources */,
 				ED28B72A2A7B14A2006555BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +332,19 @@
 			targetProxy = ED28B73D2A7B14A2006555BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDD5D7972A8181FA001C6DC3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDD5D7962A8181FA001C6DC3 /* en */,
+				EDD5D7992A81825A001C6DC3 /* es */,
+			);
+			name = Localizable.strings;
+			path = Modules/Sources/AppCore;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ED28B7442A7B14A2006555BB /* Debug */ = {

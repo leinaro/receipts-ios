@@ -23,7 +23,7 @@ public struct RecipeMapView: View {
                 longitude: self.recipe.longitude
             )
                 .edgesIgnoringSafeArea(.top)
-        }.navigationTitle("Recipe Origin")
+        }.navigationTitle(String(localized: "recipe_origin_label"))
     }
 }
 

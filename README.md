@@ -1,6 +1,7 @@
 # recipes-ios
 
 Este proyecto es una demostración de cómo usar SwiftUI, The Composable Architecture y SwiftPM para crear una aplicación de iOS.
+También se encuentra disponible su versión en Android [recipes-android](https://github.com/leinaro/recipes-android).
 
 ##Requisitos previos
 Este proyecto se desarrollo bajo las siguientes caracteristicas
@@ -33,6 +34,12 @@ Mustra un marcador en el mapa que muestra el origen de la receta.
 ###The Composable Architecture
 [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture) es una biblioteca para administrar el estado de las aplicaciones de iOS. Proporciona una manera concisa y fácil de administrar el estado, realizar efectos secundarios y probar aplicaciones.
 
+###Networking
+Para las peticiones al API se utilizó [Alamofire](https://github.com/Alamofire/Alamofire). Alamofire proporciona una forma sencilla para hacer solicitudes HTTP y manejar respuestas. 
+
+###Datos
+Para la generación de datos se utilizó mockaroo. [Mockaroo](https://mockaroo.com/) es una herramienta en línea que te permite crear modelos de datos de prueba. Puedes usar Mockaroo para crear tablas, registros y campos de prueba. También puedes exportar tus modelos de datos de prueba en una variedad de formatos, incluidos JSON, CSV y XML.
+
 ###SwiftUI
 [SwiftUI](https://developer.apple.com/xcode/swiftui/) es un marco de desarrollo de interfaz de usuario declarativo y reactivo desarrollado por Apple Inc. para crear interfaces de usuario para aplicaciones iOS, iPadOS, macOS, tvOS y watchOS.
 
@@ -43,5 +50,11 @@ El SDK de [Google Maps](https://github.com/googlemaps/google-maps-ios-utils) par
 Se implemento inyección de dependencias basica a travez del constructor.
 
 ###Internacionalización
+Disponible en ingles y español
+
 ###Unit test
 ###Sourcery
+
+## Developers
+
+* [leinaro](https://github.com/leinaro)

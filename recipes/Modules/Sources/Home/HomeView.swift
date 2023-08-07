@@ -39,14 +39,14 @@ public struct HomeView: View {
                             Text("\(recipe.name)")
                         }
                     }
-                }.navigationTitle("Recipes")
+                }.navigationTitle(String(localized: "recipe_list_title"))
             }
             .searchable(
                 text: viewStore.binding(
                     get: \.query,
                     send: HomeAction.queryChanged
                   ),
-                prompt: "Search"
+                prompt: String(localized: "recipe_list_search")
             )
             .onAppear { viewStore.send(.onAppear) }
         }
